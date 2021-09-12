@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script> 
   
   <title>Frontend Mentor | Calculator app</title>
 
@@ -15,12 +17,35 @@
   </style>
 </head>
 <body>
-
-
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Milan Jain</a>.
+  </div>
+  <div class="calc">
+    <div class="inner inner1">
+      <span class="expression"></span>
+      <span class = "curr-num"></span>
+    </div>
+    <div class="inner inner2">
+      <button class="key">7</button>
+      <button class="key">8</button>
+      <button class="key">9</button>
+      <button class="key del" style="font-size: 25px;">DEL</button>
+      <button class="key">4</button>
+      <button class="key">5</button>
+      <button class="key">6</button>
+      <button class="key operator add">+</button>
+      <button class="key">1</button>
+      <button class="key">2</button>
+      <button class="key">3</button>
+      <button class="key operator subtract">-</button>
+      <button class="key">.</button>
+      <button class="key">0</button>
+      <button class="key operator divide">/</button>
+      <button class="key operator multiply">x</button>
+      <button class="special-key reset">RESET</button>
+      <button class="special-key result">=</button>
+    </div>
   </div>
 </body>
 </html>
