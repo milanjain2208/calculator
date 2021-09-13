@@ -1,5 +1,6 @@
 
 window.onload = function() {
+    document.documentElement.className = "theme3";
     const currNum = document.querySelector(".inner1 .curr-num")
     const screen = document.querySelector(".inner1 .expression")
     const operators = document.querySelectorAll(".operator")
@@ -10,8 +11,10 @@ window.onload = function() {
     const result = document.querySelector(".result");
     const reset = document.querySelector(".reset")
     const del = document.querySelector(".del")
+    const circle = document.querySelector(".circle")
     let expression="";
     const keys = document.querySelectorAll(".key")
+    const body = document.querySelector("body")
     function clean(number) {
         if(number.length>9) {
             if(number>=1000000000) {
@@ -50,6 +53,10 @@ window.onload = function() {
     })
     del.addEventListener("click", event => {
         currNum.innerText =  currNum.innerText.slice(0, -1)
+    })
+
+    circle.addEventListener("click", event => {
+        body.style.backgroundColor = "hsl(0, 0%, 90%)";
     })
 
 }

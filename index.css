@@ -1,20 +1,94 @@
 body{
-    background-color: hsl(222, 26%, 31%);
     height: 100vh;
     position: relative;
+    background-color: var(--color-main-background);
+}
+
+.theme1{
+    --color-main-background: hsl(222, 26%, 31%);
+    --color-toggle-keypad-backgound: hsl(223, 31%, 20%);
+    --color-screen-background: hsl(224, 36%, 15%);
+    --color-del-reset-key-background: hsl(225, 21%, 49%);
+    --color-del-reset-shadow: hsl(224, 28%, 35%);
+    --color-equal-key-background: hsl(6, 63%, 50%);
+    --color-equal-key-shadow: hsl(6, 70%, 34%);
+    --color-toggle-key: hsl(6, 63%, 50%);
+    --color-key-background: hsl(30, 25%, 89%);
+    --color-key-shadow: hsl(28, 16%, 65%);
+    --font-key: hsl(221, 14%, 31%);
+    --font-special: hsl(0, 0%, 100%);
+}
+.theme2{
+    --color-main-background: hsl(0, 0%, 90%);
+    --color-toggle-keypad-backgound: hsl(0, 5%, 81%);
+    --color-screen-background: hsl(0, 0%, 93%);
+    --color-del-reset-key-background: hsl(185, 42%, 37%);
+    --color-del-reset-shadow: hsl(185, 58%, 25%);
+    --color-equal-key-background: hsl(25, 98%, 40%);
+    --color-equal-key-shadow: hsl(25, 99%, 27%);
+    --color-toggle-key: hsl(25, 98%, 40%);
+    --color-key-background: hsl(45, 7%, 89%);
+    --color-key-shadow: hsl(35, 11%, 61%);
+    --font-key: hsl(60, 10%, 19%);
+    --font-special: hsl(60, 10%, 19%);
+}
+.theme3{
+    --color-main-background: hsl(268, 75%, 9%);
+    --color-toggle-keypad-backgound: hsl(268, 71%, 12%);
+    --color-screen-background: hsl(268, 71%, 12%);
+    --color-del-reset-key-background: hsl(281, 89%, 26%);
+    --color-del-reset-shadow: hsl(285, 91%, 52%);
+    --color-equal-key-background: hsl(176, 100%, 44%);
+    --color-equal-key-shadow: hsl(177, 92%, 70%);
+    --color-toggle-key: hsl(176, 100%, 44%);
+    --color-key-background: hsl(268, 47%, 21%);
+    --color-key-shadow: hsl(290, 70%, 36%);
+    --font-key: hsl(52, 100%, 62%);
+    --font-special: hsl(52, 100%, 62%);
+}
+.calc-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--font-special);
+}
+.theme-changer-box{
+    width: 50px;
+}
+.theme-changer-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    font-weight: bold;
+}
+.theme-changer {
+    background-color: var(--color-toggle-keypad-backgound);
+    height: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    justify-content: center;
+}
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-toggle-key);
+    border-radius: 100%;
 }
 .calc{
-    background-color:  hsl(222, 26%, 31%);
+    background-color:  var(--color-main-background);
     width: 60%;
     max-width: 530px;
     min-width: 355px;
-    height: 60%;
+    height: 80%;
+    max-height: 580px;
     display: grid;
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    grid-template-rows: 1.5fr 6fr;
+    grid-template-rows: 0.5fr 1.5fr 6fr;
     grid-gap: 1rem;
 }
 .inner{
@@ -22,9 +96,9 @@ body{
     padding: 6% 6%;
 }
 .inner1{
-    background-color: hsl(224, 36%, 15%);
-    font-size: 45px;
-    color: white;
+    background-color: var(--color-screen-background);
+    font-size: 40px;
+    color: var(--font-special);
     font-weight: 700;
     display: flex;
     flex-direction: column;
@@ -34,7 +108,7 @@ body{
     
 }
 .inner2{
-    background-color: hsl(223, 31%, 20%);
+    background-color: var(--color-toggle-keypad-backgound);
     display: grid;
     grid-template-rows: repeat(5,1fr);
     grid-template-columns: repeat(4, 1fr);
@@ -42,7 +116,7 @@ body{
     grid-column-gap: 4%;
 }
 .special-key{
-    color: white;
+    color: hsl(0, 0%, 100%);
     grid-column: span 2;
     font-size: 32px;
     font-weight: 700;
@@ -50,28 +124,28 @@ body{
     border: none
 }
 .reset {
-    background-color: hsl(225, 21%, 49%);
-    box-shadow: 0px 5px hsl(224, 28%, 35%);
+    background-color: var(--color-del-reset-key-background);
+    box-shadow: 0px 5px var(--color-del-reset-shadow);
     font-size: 25px;
 
 }
 .result {
-    background-color: hsl(6, 63%, 50%);
-    box-shadow: 0px 5px hsl(6, 70%, 34%);
+    background-color: var(--color-equal-key-background);
+    box-shadow: 0px 5px var(--color-equal-key-shadow);
 }
 .key {
-    background-color: hsl(30, 25%, 89%);
-    color: hsl(221, 14%, 31%);
+    background-color: var(--color-key-background);
+    color: var(--font-key);
     font-size: 32px;
     font-weight: 700;
-    box-shadow: 0px 5px hsl(28, 16%, 65%);
+    box-shadow: 0px 5px var(--color-key-shadow);
     border-radius: 10px;
-    border: none
+    border: none;
 }
 .del {
-    background-color: hsl(225, 21%, 49%);
-    box-shadow: 0px 5px hsl(224, 28%, 35%);
-    color: white;
+    background-color: var(--color-del-reset-key-background);
+    box-shadow: 0px 5px var(--color-del-reset-shadow);
+    color: hsl(0, 0%, 100%);
 }
 button {
     cursor: pointer;
@@ -88,4 +162,7 @@ button:active {
 .curr-num {
     margin-top: auto;
     margin-bottom: auto;
+}
+span:empty::before {
+    content: "\200b"; 
 }
