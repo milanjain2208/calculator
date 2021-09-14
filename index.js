@@ -1,6 +1,5 @@
 
 window.onload = function() {
-    document.documentElement.className = "theme3";
     const currNum = document.querySelector(".inner1 .curr-num")
     const screen = document.querySelector(".inner1 .expression")
     const operators = document.querySelectorAll(".operator")
@@ -15,6 +14,35 @@ window.onload = function() {
     let expression="";
     const keys = document.querySelectorAll(".key")
     const body = document.querySelector("body")
+    const themeChanger = document.querySelector(".theme-changer")
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.className = themeName;
+    }
+    function toggleTheme() {
+       if (localStorage.getItem('theme') === 'theme1'){
+           setTheme('theme2');
+       } 
+       else if(localStorage.getItem('theme') === 'theme2') {
+           setTheme('theme3');
+       }
+       else {
+           setTheme('theme1');
+       }
+    }
+    (function () {
+        switch(localStorage.getItem('theme')) {
+            case "theme2":
+                setTheme("theme2");
+                break;
+            case "theme3":
+                setTheme("theme3");
+                break;
+            default:
+                setTheme("theme1");
+        }
+    })();
+
     function clean(number) {
         if(number.length>9) {
             if(number>=1000000000) {
@@ -55,8 +83,5 @@ window.onload = function() {
         currNum.innerText =  currNum.innerText.slice(0, -1)
     })
 
-    circle.addEventListener("click", event => {
-        body.style.backgroundColor = "hsl(0, 0%, 90%)";
-    })
-
+    themeChanger.addEventListener("click", toggleTheme)
 }

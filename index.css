@@ -2,6 +2,7 @@ body{
     height: 100vh;
     position: relative;
     background-color: var(--color-main-background);
+    font-family: 'Spartan', sans-serif;
 }
 
 .theme1{
@@ -17,6 +18,7 @@ body{
     --color-key-shadow: hsl(28, 16%, 65%);
     --font-key: hsl(221, 14%, 31%);
     --font-special: hsl(0, 0%, 100%);
+    --circle-justify: left;
 }
 .theme2{
     --color-main-background: hsl(0, 0%, 90%);
@@ -31,6 +33,7 @@ body{
     --color-key-shadow: hsl(35, 11%, 61%);
     --font-key: hsl(60, 10%, 19%);
     --font-special: hsl(60, 10%, 19%);
+    --circle-justify: center;
 }
 .theme3{
     --color-main-background: hsl(268, 75%, 9%);
@@ -45,11 +48,13 @@ body{
     --color-key-shadow: hsl(290, 70%, 36%);
     --font-key: hsl(52, 100%, 62%);
     --font-special: hsl(52, 100%, 62%);
+    --circle-justify: right;
 }
 .calc-header {
     display: flex;
     justify-content: space-between;
     color: var(--font-special);
+    align-items: end;
 }
 .theme-changer-box{
     width: 50px;
@@ -68,7 +73,8 @@ body{
     align-items: center;
     padding-left: 0.1rem;
     padding-right: 0.1rem;
-    justify-content: center;
+    justify-content: var(--circle-justify);
+    cursor: pointer;
 }
 .circle {
     width: 10px;
@@ -136,7 +142,7 @@ body{
 .key {
     background-color: var(--color-key-background);
     color: var(--font-key);
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 700;
     box-shadow: 0px 5px var(--color-key-shadow);
     border-radius: 10px;
@@ -149,6 +155,7 @@ body{
 }
 button {
     cursor: pointer;
+    font-family: inherit;
 }
 button:active {
     box-shadow: none;
