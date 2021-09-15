@@ -57,15 +57,19 @@ body{
     align-items: end;
 }
 .theme-changer-box{
-    width: 50px;
+    width: 100px;
 }
 .theme-changer-label {
+    width: 50%;
+    float: right;
     display: flex;
     justify-content: space-between;
     font-size: small;
     font-weight: bold;
 }
 .theme-changer {
+    width: 50%;
+    float: right;
     background-color: var(--color-toggle-keypad-backgound);
     height: 15px;
     border-radius: 10px;
@@ -86,7 +90,7 @@ body{
     background-color:  var(--color-main-background);
     width: 60%;
     max-width: 530px;
-    min-width: 355px;
+    min-width: 320px;
     height: 80%;
     max-height: 580px;
     display: grid;
