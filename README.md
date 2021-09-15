@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/milanjain2208/calculator](https://github.com/milanjain2208/calculator)
+- Live Site URL: [https://milanjain2208.github.io/calculator/](https://milanjain2208.github.io/calculator/)
 
 ### Built with
 
