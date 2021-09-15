@@ -19,6 +19,7 @@ body{
     --font-key: hsl(221, 14%, 31%);
     --font-special: hsl(0, 0%, 100%);
     --circle-justify: left;
+    --font-res:white;
 }
 .theme2{
     --color-main-background: hsl(0, 0%, 90%);
@@ -34,6 +35,7 @@ body{
     --font-key: hsl(60, 10%, 19%);
     --font-special: hsl(60, 10%, 19%);
     --circle-justify: center;
+    --font-res: white;
 }
 .theme3{
     --color-main-background: hsl(268, 75%, 9%);
@@ -49,6 +51,7 @@ body{
     --font-key: hsl(52, 100%, 62%);
     --font-special: hsl(52, 100%, 62%);
     --circle-justify: right;
+    --font-res: black;
 }
 .calc-header {
     display: flex;
@@ -142,6 +145,7 @@ body{
 .result {
     background-color: var(--color-equal-key-background);
     box-shadow: 0px 5px var(--color-equal-key-shadow);
+    color: var(--font-res);
 }
 .key {
     background-color: var(--color-key-background);
