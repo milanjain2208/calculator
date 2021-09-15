@@ -68,11 +68,13 @@ window.onload = function() {
         // console.log(expression)
     }))
     result.addEventListener("click", () => {
-        let evaluation = eval(expression+parseFloat(currNum.innerText))
-        let evalString = clean(evaluation.toString())
-        currNum.innerText = evalString
-        screen.innerText = ""
-        expression = ""
+        if(currNum.innerText) {
+            let evaluation = eval(expression+parseFloat(currNum.innerText))
+            let evalString = clean(evaluation.toString())
+            currNum.innerText = evalString
+            screen.innerText = ""
+            expression = ""
+        }
     })
     reset.addEventListener("click", event => {
         currNum.innerText = ""
