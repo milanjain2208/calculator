@@ -62,8 +62,13 @@ window.onload = function() {
     operators.forEach(operator => operator.addEventListener('click', () => {
         const number = parseFloat(currNum.innerText).toString()
         currNum.innerText = ""
-        expression = expression+number+(operator.innerText=="x"? "*":operator.innerText)
+        if(!isNaN(number)) {
+            expression = expression+number+(operator.innerText=="x"? "*":operator.innerText)
+        }
+        else {
+            expression = expression.slice(0,-1) + (operator.innerText=="x"? "*":operator.innerText)
 
+        }
         screen.innerText = expression;
         // console.log(expression)
     }))
